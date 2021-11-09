@@ -110,9 +110,9 @@
                                                     $sql = "SELECT * FROM pais";
                                                     $lista = mysqli_query($conexion, $sql);
                                                     while($fila = $lista->fetch_assoc()){
-                                                            $id=$fila['idpais'];
+                                                            $idpais=$fila['idpais'];
                                                             $nombre=$fila['pais'];
-                                                            echo "<option value=$id>$nombre</option>";
+                                                            echo "<option value=$idpais>$nombre</option>";
                                                     }
                                                     ?>
                                                     </select>
@@ -174,9 +174,9 @@
                                                     $sql = "SELECT * FROM localidad";
                                                     $lista = mysqli_query($conexion, $sql);
                                                     while($fila = $lista->fetch_assoc()){
-                                                            $id=$fila['idloc'];
+                                                            $localidad=$fila['idloc'];
                                                             $nombre=$fila['localidad'];
-                                                            echo "<option value=$id>$nombre</option>";
+                                                            echo "<option value=$localidad>$nombre</option>";
                                                     }
                                                     ?>
                                                     </select>
@@ -193,8 +193,8 @@
 					<span class="error">* </span><br>
 
 					<label for="licencia">Licencia de conducir:</label>
-					<input type="radio" name="licencia" value="si" id="licsi" <?php if ($result['licencia'] == "1") { ?>checked="checked" <?php } ?> onclick="vehiculo()">Si
-					<input type="radio" name="licencia" value="no" <?php if ($result['licencia'] == "0") { ?>checked="checked" <?php } ?> onclick="vehiculo()">No
+					<input type="radio" name="licencia" value="1" id="licsi" <?php if ($result['licencia'] == "1") { ?>checked="checked" <?php } ?> onclick="vehiculo()">Si
+					<input type="radio" name="licencia" value="0" <?php if ($result['licencia'] == "0") { ?>checked="checked" <?php } ?> onclick="vehiculo()">No
 					<span class="error">* </span><br>
                     
                     <div id="auto" style="display:none">

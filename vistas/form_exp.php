@@ -24,7 +24,7 @@
     <div class="container">
         <div class="abs-center">
 
-            <form method="post" action="create.php">
+            <form method="post" action="../db/create.php">
                 <fieldset>
                     <p><span class="error">* Campo obligatorio</span></p>
                     <legend>Experiencias:</legend>
